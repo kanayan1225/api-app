@@ -1,5 +1,15 @@
-- @books.each do |book|
-  = book.title
-  = book.author
-  = book.item_caption
-  = link_to (image_tag(book.medium_image_url)), book.item_url
+- if @books.present?
+  - @books.each do |book|
+    .list
+    - if book.item_url
+      .list__book_image
+      = link_to (image_tag(book.medium_image_url, style: "width: 200px; height: 200px; display: inline-block;")), book.item_url
+      .list__book_title
+      = book.title
+      .list__book_author
+      = book.author
+      .list__book_caption
+      = book.item_caption
+      .list__book_cprice
+      ¥
+      = book.item_price

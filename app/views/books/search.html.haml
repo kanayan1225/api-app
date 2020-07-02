@@ -6,7 +6,8 @@
     .search_box__form-group
       = f.text_field :keyword, class: "form-control"
       = f.submit '本の題名を検索', class: "form-control btn btn-success"
-- if @books.present?
+
+.books-list
   = render 'books/book'
 
 .footer
