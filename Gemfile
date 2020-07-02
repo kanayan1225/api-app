@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails'
 gem 'haml-rails'
+
+# 楽天API使用のため
+gem 'rakuten_web_service'
