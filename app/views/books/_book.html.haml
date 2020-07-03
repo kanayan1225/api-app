@@ -10,6 +10,8 @@
       = book.author
       .list__book_caption
       = book.item_caption
-      .list__book_cprice
+      .list__book_price
       ¥
       = book.item_price
+
+  = paginate @books, class: "pagination"

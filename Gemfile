@@ -66,3 +66,6 @@ gem 'haml-rails'
 
 # 楽天API使用のため
 gem 'rakuten_web_service'
+
+# ページネーション実装のため
+gem 'kaminari'

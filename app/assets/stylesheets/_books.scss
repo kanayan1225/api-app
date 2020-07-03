@@ -47,6 +47,17 @@ header {
 }
 }
 
+// ブックリスト表示
+.search-result {
+  padding-bottom: 100px;
+
+  .pagination {
+    margin-top: 15px;
+  }
+}
+
+
+
 // フッター
 footer {
   width: 100%;
