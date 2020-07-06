@@ -21,7 +21,7 @@
   .search-result__message
     ▽   気になった本の画像をクリックすると、楽天Booksの詳細情報画面に飛びます  ▽
   .search-result__container
-    = render 'books/book'
+    = render 'books/book-list'
 
 - if @books.present?
   = paginate @books, class: "pagination"

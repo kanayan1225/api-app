@@ -1,0 +1,13 @@
+// ページネーション
+.pagination {
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 18px;
+  color: $main-textcolor;
+  span {
+    padding-left: 15px;
+    a {
+      text-decoration: none;        
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// フッター
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: $sub-color;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  line-height: 40px;
+  .footer-text {
+    text-decoration: none;
+    color: $main-color;
+    font-size: 13px;
+  }
+}

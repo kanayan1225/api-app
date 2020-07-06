@@ -1,6 +1,11 @@
 // リセットCSS（sanitizeを使用）
 @import "reset";
-@import "font";
+
+@import "config/font";
 @import "config/colors";
 
-@import "books";
+@import "header";
+@import "search_box";
+@import "book-list";
+@import "pagination";
+@import "footer";

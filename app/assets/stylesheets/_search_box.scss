@@ -1,0 +1,29 @@
+// 検索ボックス
+.search_box {
+  height: 200px;
+  padding-top: 60px;
+
+  .form-box {
+    text-align: center;
+
+    #keyword {
+      width: 70%;
+      height: 45px;
+      padding-left: 10px;
+      font-size: 12px;
+    }
+    .submit-btn {
+      margin-top: 15px;
+      width: 240px;
+      padding: 10px 0;
+      font-size: 15px;
+      color: #fff;
+      background-color: $sub-color;
+      border-radius: 27px;
+
+      &:hover {
+        box-shadow: 0 0 10px $emphasis-color;
+      }
+    }
+}
+}
