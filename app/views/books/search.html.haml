@@ -1,9 +1,11 @@
 %header
   .nav
+    = link_to "Book Search WEB Site", "/", class: "nav-title"
     
   .fv-view
-  = image_tag 'hero-img.png', alt: 'fv-image', height: '260px', width: '100%', class: 'fv-image'
-
+    .fv-view__textbox
+      %p 人生を彩る。人生を変える。
+      %p そんな一冊を、探してみよう。
 
 
 
@@ -12,11 +14,21 @@
     .search_box__form
       = f.text_field :keyword, class: "input-form", placeholder: "本のタイトルを入力してください"
     .search_box__btn
-      = f.submit '本の題名を検索', class: "submit-btn"
+      = f.submit '本のタイトルで検索', class: "submit-btn"
 
 .search-result
-  = render 'books/book'
+- if @books.present?
+  .search-result__message
+    ▽   気になった本の画像をクリックすると、楽天Booksの詳細情報画面に飛びます  ▽
+  .search-result__container
+    = render 'books/book'
+
+- if @books.present?
+  = paginate @books, class: "pagination"
 
 
 %footer
-  (仮置き)Supported by Rakuten Developers
+  -# Rakuten Web Services Attribution Snippet FROM HERE
+  -# <a href="https://webservice.rakuten.co.jp/" target="_blank">Supported by Rakuten Developers</a>
+  = link_to "Supported by Rakuten Developers", "https://webservice.rakuten.co.jp/",target: "_blank", class: "footer-text"
+  -# Rakuten Web Services Attribution Snippet TO HERE

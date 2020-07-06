@@ -1,17 +1,15 @@
-- if @books.present?
-  - @books.each do |book|
-    .list
+- @books.each do |book|
+  .search-result__container__lists
     - if book.item_url
-      .list__book_image
-      = link_to (image_tag(book.medium_image_url, style: "width: 200px; height: 200px; display: inline-block;")), book.item_url
-      .list__book_title
-      = book.title
-      .list__book_author
-      = book.author
-      .list__book_caption
-      = book.item_caption
-      .list__book_price
-      ¥
-      = book.item_price
-
-  = paginate @books, class: "pagination"
+      .book_image
+        = link_to (image_tag(book.medium_image_url, style: "width: auto; height: auto; display: inline-block;")), book.item_url
+      .book_title
+        = book.title
+      .book_author
+        = book.author
+      .book_caption
+        出版社名：
+        = book.publisher_name
+      .book_price
+        ¥
+        = book.item_price.to_s(:delimited)

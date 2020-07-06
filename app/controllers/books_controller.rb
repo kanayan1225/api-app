@@ -8,7 +8,7 @@ class BooksController < ApplicationController
       books.each do |book|
         @books_hash.push(book)
       end
-      @books = Kaminari.paginate_array(@books_hash).page(params[:page]).per(9)
+      @books = Kaminari.paginate_array(@books_hash).page(params[:page]).per(15)
     end
   end
   
